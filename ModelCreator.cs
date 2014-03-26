@@ -7,6 +7,11 @@ namespace ModelsLibrary
 {
     public class ModelCreator
     {
+        /// <summary>
+        /// Create a class that inherits from AbstractModel and define its property based on an existing table in MySQL database.
+        /// </summary>
+        /// <param name="className">The name of the class</param>
+        /// <returns>The filename (including its path) of the generated class</returns>
         public static string Create(string className) {
             var query = "SHOW FIELDS FROM " + StringHelper.Pluralize(className.ToFieldName());
             var dataTable = DatabaseController.ExecuteSelectQuery(query);
