@@ -49,23 +49,11 @@
   <ItemGroup>
     <Compile Include="AbstractModel.cs" />
     <Compile Include="ActionResult.cs" />
-    <Compile Include="CoopDatabase\Member.cs" />
-    <Compile Include="CoopDatabase\Person.cs" />
-    <Compile Include="CoopDatabase\User.cs" />
     <Compile Include="ModelCreator.cs" />
-    <Compile Include="Payroll\Billing.cs" />
-    <Compile Include="Payroll\CashAdvance.cs" />
-    <Compile Include="CoopDatabase\Collector.cs" />
     <Compile Include="DatabaseInstance.cs" />
     <Compile Include="DatabaseController.cs" />
     <Compile Include="Helper.cs" />
-    <Compile Include="Payroll\Employee.cs" />
-    <Compile Include="Payroll\EmployeeStatus.cs" />
-    <Compile Include="Payroll\Payroll.cs" />
-    <Compile Include="Payroll\SssContribution.cs" />
     <Compile Include="ModelCollection.cs" />
-    <Compile Include="Payroll\PhilhealthContribution.cs" />
-    <Compile Include="Payroll\TaxGroup.cs" />
     <Compile Include="Utilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
