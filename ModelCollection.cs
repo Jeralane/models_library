@@ -19,5 +19,13 @@ namespace ModelsLibrary
             }
             return collection;
         }
+
+        public static T Find<T>(int id) where T : AbstractModel, new()
+        {
+            var item = new T();
+             item.Read(id);
+
+            return item;
+        }
     }
 }

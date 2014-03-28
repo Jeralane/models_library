@@ -65,7 +65,6 @@
     <Compile Include="Payroll\SssContribution.cs" />
     <Compile Include="ModelCollection.cs" />
     <Compile Include="Payroll\PhilhealthContribution.cs" />
-    <Compile Include="Payroll\StaticMethods.cs" />
     <Compile Include="Payroll\TaxGroup.cs" />
     <Compile Include="Utilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
