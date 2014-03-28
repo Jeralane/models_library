@@ -20,8 +20,9 @@ namespace ModelsLibrary
             var classBuilder = new StringBuilder();
             classBuilder.AppendLine("using System;");
             classBuilder.AppendLine("using System.Collections.ObjectModel;");
+            classBuilder.AppendLine("using "+ System.Reflection.Assembly.GetExecutingAssembly().GetName().Name +";");
             classBuilder.AppendLine();
-            classBuilder.AppendLine("namespace ModelsLibrary." + StringHelper.ToPropertyName(Properties.Settings.Default.DatabaseName));
+            classBuilder.AppendLine("namespace " + StringHelper.ToPropertyName(Properties.Settings.Default.DatabaseName) + "System.Models");
             classBuilder.AppendLine("{");
             classBuilder.AppendLine(string.Format("{0}public partial class {1} : AbstractModel","\t", className.ToPropertyName()));
             classBuilder.AppendLine(tab + "{");
