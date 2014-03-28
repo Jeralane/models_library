@@ -63,7 +63,7 @@
     <Compile Include="Payroll\EmployeeStatus.cs" />
     <Compile Include="Payroll\Payroll.cs" />
     <Compile Include="Payroll\SssContribution.cs" />
-    <Compile Include="Payroll\ModelCollections.cs" />
+    <Compile Include="ModelCollection.cs" />
     <Compile Include="Payroll\PhilhealthContribution.cs" />
     <Compile Include="Payroll\StaticMethods.cs" />
     <Compile Include="Payroll\TaxGroup.cs" />
