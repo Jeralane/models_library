@@ -13,7 +13,7 @@ namespace ModelsLibrary
         /// <param name="className">The name of the class</param>
         /// <returns>The filename (including its path) of the generated class</returns>
         public static string Create(string className) {
-            var query = "SHOW FIELDS FROM " + StringHelper.Pluralize(className.ToFieldName());
+            var query = "SHOW FIELDS FROM " + StringHelper.Pluralize(className.ToColumnName());
             var dataTable = DatabaseController.ExecuteSelectQuery(query);
 
             var tab = "\t";
@@ -97,8 +97,6 @@ namespace ModelsLibrary
             }
 
             classBuilder.AppendLine(tab + "}");
-            classBuilder.AppendLine();
-            classBuilder.AppendLine(tab + "public class " + className + "Collection : ObservableCollection<" + className + ">{ }");
             classBuilder.AppendLine();
             classBuilder.AppendLine("}");
 

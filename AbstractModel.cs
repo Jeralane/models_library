@@ -57,7 +57,7 @@ namespace ModelsLibrary
 
                 var fields = from f in table.Fields
                              where f.Key != table.Id.Key
-                             select (string.Format("`{0}` = ?{0}", f.Key.ToFieldName()));
+                             select (string.Format("`{0}` = ?{0}", f.Key.ToColumnName()));
 
                 var sqlBuilder = new StringBuilder();
                 sqlBuilder.AppendFormat("UPDATE `{0}` SET {1} WHERE `{2}` = {3}", table.Name, string.Join(", ", fields),
@@ -159,7 +159,7 @@ namespace ModelsLibrary
             // Iterate through class properties using Reflection
             foreach (PropertyInfo property in properties)
             {
-                var columnName = property.Name.ToFieldName();
+                var columnName = property.Name.ToColumnName();
                 if (dataTable.Rows[0][columnName] != null)
                 {
                     if (property.Name == "Id") continue;
@@ -217,7 +217,7 @@ namespace ModelsLibrary
             // Iterate through class properties using Reflection
             foreach (PropertyInfo property in properties)
             {
-                var fieldName = property.Name.ToFieldName();
+                var fieldName = property.Name.ToColumnName();
  
                 if (dataRow[fieldName] != null)
                 {

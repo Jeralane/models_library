@@ -88,7 +88,7 @@ namespace ModelsLibrary
             return ToTitleCase(input.Replace("_", " ")).Replace(" ", "");
         }
 
-        public static string ToFieldName(this string input)
+        public static string ToColumnName(this string input)
         {
             if (input.Contains(" ")) input = input.ToCamelCase();
             
@@ -123,7 +123,7 @@ namespace ModelsLibrary
             // input:  TheQuickBrownFox
             // output: theQuickBrownFox
 
-            var result = input.ToFieldName().ToCamelCase();
+            var result = input.ToColumnName().ToCamelCase();
             var jea = System.Char.ToLowerInvariant(result[0]) + result.Substring(1);
             return jea;
         }
@@ -139,7 +139,7 @@ namespace ModelsLibrary
             // input:  the_quick_brown_fox
             // output: TheQuickBrownFox
 
-            return input.ToFieldName().ToCamelCase();
+            return input.ToColumnName().ToCamelCase();
         }
 
     }

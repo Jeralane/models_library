@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ModelsLibrary")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This class libray aim to facilitate C# (WPF) projects that uses MySQL database")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("JEA")]
 [assembly: AssemblyProduct("ModelsLibrary")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]

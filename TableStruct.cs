@@ -16,14 +16,14 @@ namespace ModelsLibrary
             // Fields/Columns are the class properties
             Fields = new Dictionary<string, object>();
 
-            Id = new KeyValuePair<string, int>("Id".ToFieldName(), model.Id);
+            Id = new KeyValuePair<string, int>("Id".ToColumnName(), model.Id);
             Type type = model.GetType();
             PropertyInfo[] properties = type.GetProperties();
 
             // Iterate through class properties using Reflection
             foreach (PropertyInfo property in properties)
             {
-                Fields.Add(property.Name.ToFieldName(), property.GetValue(model, null));
+                Fields.Add(property.Name.ToColumnName(), property.GetValue(model, null));
             }
 
             // Table name will be the class name in plural form
